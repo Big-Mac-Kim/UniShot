@@ -3,17 +3,18 @@ UniShot is a visual localization framework based on the "comparison neural netwo
 " It can be used by an eye-in-hand robot arm or a hand-held camera for precision positioning guidance.
 There are Sliding_21.hdf5 model, Depth_13.hdf5, and two identification programs available.
 ## How To Use
-Sliding_21.hdf5 modle is a dual input neural network for sliding positioning guidance need to be 
-loaded in unishot_cam_SLIDING.py ,
-you need to take a global photo of the scene at its center for the baseline in advance as basic image ,
-then captured the photo by the camera as compare images, 
+The Sliding_21.hdf5 model is a dual-input neural network for left and right sliding localization guidance, which needs to be loaded in 
+unishot_cam_SLIDING.py,
+you need to take a global photo of the scene at its center in advance for the baseline as the basic image ,
+then captured the photo by the camera as the compare images, 
 During the operation,
 UniShot will automatically compare the relative sliding of the two images and give the predicted relative sliding value,
-(10,10) represents view of camera is at center of basic image,
-per vaule offset represent camera sliding 10 pixels.  
- 
-LIDING.py is a siding identification program, Needs to be used with  Sliding_21.hdf5 modle,
-you could  set up your camera on eye-in-hand robot arm or just hold it,
+This model has 21 labels and each label change represents a 10-pixel displacement.
+,(10,10) indicates that the camera's viewpoint is at the center of the basic image.
+
+ The Depth_13.hdf5 model is also a dual-input neural network, but it is used for forward and backward sliding localization guidance.
+All  operation processes are same of Sliding_21.hdf5, but different is this model has 13 labels 
+Each label change represents a 5-pixel slide forward or backward of the camera's view compared to the base image
 
 
 
