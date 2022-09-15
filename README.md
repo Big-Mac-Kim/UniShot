@@ -1,8 +1,6 @@
 # UniShot
 UniShot is a visual localization framework based on the "comparison neural network" architecture.
 " It can be used by an eye-in-hand robot arm or a hand-held camera for precision positioning guidance.
-Take a global photo of the scene at its center for the baseline.During the operation,
-UniShot will predict the relative position of the camera based on the view captured by the camera.
 There are Sliding_21.hdf5 model, Depth_13.hdf5, and two identification programs available.
 ## How To Use
 Sliding_21.hdf5 modle is a dual input neural network for sliding positioning guidance need to be 
