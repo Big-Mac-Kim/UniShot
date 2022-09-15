@@ -6,7 +6,7 @@ UniShot will predict the relative position of the camera based on the view captu
 There are Sliding_21.hdf5 model, Depth_13.hdf5, and two identification programs available.
 ## How To Use
 Sliding_21.hdf5 modle is a dual input neural network for sliding positioning guidance,
-input one need to take a global photo of the scene at its center for the baseline
+input one need to take a global photo of the scene at its center for the baseline,
 input two is view captured by the camera, 
 During the operation,
 UniShot will automatically compare the relative sliding of the two inputs and give the predicted value
